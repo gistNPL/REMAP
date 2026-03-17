@@ -2,51 +2,40 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>InnoCORE 연구단</title>
+  <title>InnoCORE Research Institution</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- 공통 스타일 -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- 홈 전용 -->
   <link rel="stylesheet" href="assets/css/home.css" />
 </head>
 
 <body class="home">
 
 <header class="site-header">
-  <a class="brand" href="/InnoCORE/" aria-label="Go to Home">
-
+  <a class="brand" href="./" aria-label="Go to Home">
     <span class="brand-text">InnoCORE 연구단</span>
   </a>
 
   <nav class="site-nav">
-    <a href="../">Home</a>
-    <a href="../project/">Project</a>
-    <a href="../member/">Member</a>
-    <a href="../contact/">Contact</a>
+    <a href="./">Home</a>
+    <a href="project/">Project</a>
+    <a href="member/">Member</a>
+    <a href="contact/">Contact</a>
   </nav>
 </header>
 
-<!-- =========================
-  여기에 InnoCORE 제일 중요한 사진 넣기
-========================= -->
 <section class="home-hero-dual">
-  <div>
-    <figure class="hero-item hero-item-optic">
-      <img
-        src="assets/img/main/main0.png"
-        alt="Optical setup in the laboratory"
-      />
+  <div class="hero-grid">
+    <figure class="hero-item hero-item-result">
+      <img src="assets/img/main/main0.png" alt="CARE main visual" />
+    </figure>
+
+    <figure class="hero-item hero-item-poster">
+      <img src="assets/img/main/poster.png" alt="CARE Fellowship poster" />
     </figure>
   </div>
 </section>
 
-<!-- =========================
-     MAIN
-========================= -->
 <main class="home-page">
-
-  <!-- Lab Highlights -->
   <section class="home-section">
     <div class="section-head-row">
       <div>
@@ -63,17 +52,20 @@
             <img
               src="assets/img/main/main2.png"
               class="slider-image"
+              alt="Highlight image 1"
             />
 
             <img
               src="assets/img/main/main3.png"
               class="slider-image"
+              alt="Highlight image 2"
             />
 
             <img
-            src="assets/img/main/main4.png"
-            class="slider-image"
-          />
+              src="assets/img/main/main4.png"
+              class="slider-image"
+              alt="Highlight image 3"
+            />
           </div>
         </div>
 
@@ -83,10 +75,10 @@
       <div class="slider-dots">
         <button class="dot active" aria-label="Go to slide 1"></button>
         <button class="dot" aria-label="Go to slide 2"></button>
+        <button class="dot" aria-label="Go to slide 3"></button>
       </div>
     </div>
   </section>
-
 </main>
 
 <footer>

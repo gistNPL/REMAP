@@ -11,7 +11,7 @@ body.home {
   --home-border: #e5e7eb;
   --home-soft: #f8fbff;
 
-  background: #ffffff;
+  background: #f7f9fc;
   color: var(--home-text);
 }
 
@@ -22,7 +22,7 @@ body.home {
 .home-page {
   width: min(1160px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 56px 0 84px;
+  padding: 28px 0 84px;
 }
 
 .home-section + .home-section {
@@ -74,27 +74,35 @@ body.home {
 /* =========================
    HERO - TWO IMAGES
 ========================= */
+/* =========================
+   HERO - TWO IMAGES
+========================= */
 
 .home-hero-dual {
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: #02050b;
+  background: #060d1a;
+  padding: 18px 0 0;
 }
 
 .hero-grid {
+  width: min(1400px, calc(100% - 36px));
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
-  gap: 8px;
-  height: 70vh;
-  min-height: 320px;
-  max-height: 450px;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 18px;
+  height: 68vh;
+  min-height: 420px;
+  max-height: 720px;
 }
 
 .hero-item {
   position: relative;
   overflow: hidden;
-  background: #02050b;
+  border-radius: 22px;
+  background: #031126;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.22);
 }
 
 .hero-item img {
@@ -103,18 +111,22 @@ body.home {
   display: block;
 }
 
-.hero-item-optic img {
-  object-fit: cover;
-}
-
 .hero-item-result {
-  background: #000000;
+  background: linear-gradient(180deg, #020817 0%, #0a1d48 100%);
 }
 
 .hero-item-result img {
   object-fit: contain;
-  background: #000000;
-  padding: 18px;
+  padding: 8px;
+}
+
+.hero-item-poster {
+  background: #031126;
+}
+
+.hero-item-poster img {
+  object-fit: contain;
+  padding: 8px;
 }
 
 .hero-overlay {
