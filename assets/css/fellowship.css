@@ -1,0 +1,191 @@
+/* =========================================================
+   FELLOWSHIP PAGE
+========================================================= */
+
+body.fellowship-body {
+    --fellowship-navy: #08111f;
+    --fellowship-blue: #173ea8;
+    --fellowship-sky: #2d8cff;
+    --fellowship-text: #0f172a;
+    --fellowship-muted: #64748b;
+    --fellowship-border: #e5e7eb;
+    --fellowship-soft: #f8fbff;
+  
+    background: #f7f9fc;
+    color: var(--fellowship-text);
+  }
+  
+  .fellowship-page {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 42px 0 84px;
+  }
+  
+  .fellowship-hero {
+    margin-bottom: 30px;
+    padding: 34px 36px;
+    border-radius: 28px;
+    background:
+      linear-gradient(135deg, #08111f 0%, #0f2347 60%, #173ea8 100%);
+    color: #ffffff;
+    box-shadow: 0 20px 44px rgba(8, 17, 31, 0.18);
+  }
+  
+  .page-kicker {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 14px;
+    padding: 0.45rem 0.88rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  
+  .fellowship-hero h1 {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+  }
+  
+  .hero-sub {
+    margin: 16px 0 0;
+    max-width: 860px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .fellowship-section {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .rule-card {
+    position: relative;
+    overflow: hidden;
+    padding: 28px 30px;
+    border: 1px solid rgba(8, 17, 31, 0.08);
+    border-radius: 24px;
+    background: linear-gradient(180deg, #ffffff 0%, var(--fellowship-soft) 100%);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.05);
+  }
+  
+  .rule-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    background: linear-gradient(180deg, var(--fellowship-blue) 0%, var(--fellowship-sky) 100%);
+  }
+  
+  .rule-card h2 {
+    margin: 0 0 14px;
+    font-size: clamp(20px, 2.3vw, 26px);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: #0b1730;
+  }
+  
+  .rule-card p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #1e293b;
+    word-break: keep-all;
+  }
+  
+  .rule-card p + p {
+    margin-top: 14px;
+  }
+  
+  .rule-card ol,
+  .rule-card ul {
+    margin: 0;
+    padding-left: 1.35rem;
+  }
+  
+  .rule-card ol {
+    display: grid;
+    gap: 12px;
+  }
+  
+  .rule-card ul {
+    margin-top: 10px;
+    display: grid;
+    gap: 8px;
+  }
+  
+  .rule-card li {
+    font-size: 16px;
+    line-height: 1.85;
+    color: #1e293b;
+    word-break: keep-all;
+  }
+  
+  .rule-card ul li {
+    list-style: disc;
+  }
+  
+  .rule-card ol li::marker {
+    font-weight: 700;
+    color: #0f2347;
+  }
+  
+  @media (max-width: 768px) {
+    .fellowship-page {
+      width: min(1120px, calc(100% - 24px));
+      padding: 28px 0 72px;
+    }
+  
+    .fellowship-hero {
+      padding: 26px 22px;
+      border-radius: 22px;
+    }
+  
+    .hero-sub {
+      font-size: 15px;
+      line-height: 1.75;
+    }
+  
+    .rule-card {
+      padding: 24px 22px;
+      border-radius: 20px;
+    }
+  
+    .rule-card h2 {
+      margin-bottom: 12px;
+    }
+  
+    .rule-card p,
+    .rule-card li {
+      font-size: 15px;
+      line-height: 1.82;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .fellowship-page {
+      padding: 22px 0 64px;
+    }
+  
+    .fellowship-hero {
+      padding: 22px 18px;
+      border-radius: 18px;
+    }
+  
+    .rule-card {
+      padding: 20px 18px;
+      border-radius: 18px;
+    }
+  
+    .rule-card p,
+    .rule-card li {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+  }
