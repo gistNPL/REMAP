@@ -10,6 +10,7 @@ body.home {
   --home-muted: #64748b;
   --home-border: #e5e7eb;
   --home-soft: #f8fbff;
+  --home-soft-2: #eef4fb;
 
   background: #f7f9fc;
   color: var(--home-text);
@@ -22,7 +23,7 @@ body.home {
 .home-page {
   width: min(1160px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 28px 0 84px;
+  padding: 34px 0 84px;
 }
 
 .home-section + .home-section {
@@ -41,6 +42,7 @@ body.home {
   margin: 0;
   font-size: clamp(28px, 3vw, 36px);
   line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 .section-sub {
@@ -48,6 +50,21 @@ body.home {
   font-size: 15px;
   color: var(--home-muted);
   line-height: 1.7;
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 0.42rem 0.82rem;
+  border-radius: 999px;
+  background: rgba(23, 62, 168, 0.08);
+  border: 1px solid rgba(23, 62, 168, 0.10);
+  color: var(--home-blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .home-link-btn {
@@ -130,100 +147,51 @@ body.home {
   background: #020817;
 }
 
-/* 혹시 이전 오버레이 구조를 나중에 다시 쓸 수도 있으니 유지 */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 28px;
+/* =========================
+   PHILOSOPHY
+========================= */
+
+.philosophy-section {
+  margin-top: 0;
+}
+
+.philosophy-head {
+  margin-bottom: 18px;
+}
+
+.philosophy-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(8, 17, 31, 0.08);
+  border-radius: 28px;
   background:
-    linear-gradient(180deg, rgba(2, 5, 11, 0.18) 0%, rgba(2, 5, 11, 0.56) 100%),
-    linear-gradient(90deg, rgba(2, 5, 11, 0.34) 0%, rgba(2, 5, 11, 0.12) 50%, rgba(2, 5, 11, 0.28) 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 251, 255, 0.98) 100%);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
 }
 
-.hero-content {
-  max-width: 780px;
-  text-align: center;
-  color: #ffffff;
-  padding: 28px 30px;
-  border-radius: 24px;
-  background: rgba(8, 17, 31, 0.20);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(10px);
+.philosophy-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: linear-gradient(180deg, var(--home-blue) 0%, var(--home-sky) 100%);
 }
 
-.hero-kicker {
-  display: inline-block;
-  margin-bottom: 14px;
-  padding: 0.45rem 0.9rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  font-size: 0.84rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.philosophy-body {
+  padding: 34px 36px 34px 40px;
 }
 
-.hero-content h1 {
+.philosophy-body p {
   margin: 0;
-  font-size: clamp(42px, 6vw, 72px);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  font-size: 16px;
+  line-height: 1.95;
+  color: #1e293b;
+  letter-spacing: -0.01em;
+  word-break: keep-all;
 }
 
-.hero-content p {
-  max-width: 720px;
-  margin: 18px auto 0;
-  font-size: clamp(16px, 2vw, 20px);
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  justify-content: center;
-  margin-top: 28px;
-}
-
-.hero-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 52px;
-  padding: 0.95rem 1.35rem;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-}
-
-.hero-btn:hover {
-  transform: translateY(-2px);
-}
-
-.hero-btn-primary {
-  background: #ffffff;
-  color: var(--home-navy);
-  box-shadow: 0 14px 32px rgba(255, 255, 255, 0.18);
-}
-
-.hero-btn-primary:hover {
-  background: #f7f9ff;
-}
-
-.hero-btn-secondary {
-  background: rgba(255, 255, 255, 0.10);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.hero-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.16);
+.philosophy-body p + p {
+  margin-top: 22px;
 }
 
 /* =========================
@@ -398,11 +366,16 @@ body.home {
     height: 60vh;
     min-height: 380px;
   }
+
+  .philosophy-body {
+    padding: 30px 30px 30px 34px;
+  }
 }
 
 @media (max-width: 768px) {
   .home-page {
     width: min(1160px, calc(100% - 24px));
+    padding: 28px 0 72px;
   }
 
   .hero-grid {
@@ -411,32 +384,6 @@ body.home {
     height: auto;
     min-height: 0;
     max-height: none;
-  }
-
-  .hero-content {
-    width: 100%;
-    max-width: 640px;
-    padding: 24px 20px;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(36px, 10vw, 56px);
-  }
-
-  .hero-content p {
-    font-size: 16px;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    width: 100%;
-    max-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-btn {
-    width: 100%;
   }
 
   .slider-image {
@@ -450,11 +397,24 @@ body.home {
   .hero-item-result img {
     object-fit: contain;
   }
+
+  .philosophy-card {
+    border-radius: 22px;
+  }
+
+  .philosophy-body {
+    padding: 26px 22px 26px 26px;
+  }
+
+  .philosophy-body p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
 }
 
 @media (max-width: 480px) {
   .home-page {
-    padding: 44px 0 72px;
+    padding: 24px 0 64px;
   }
 
   .home-showcase-card {
@@ -473,6 +433,15 @@ body.home {
   }
 
   .hero-grid {
-    grid-template-rows: 240px 320px;
+    grid-template-rows: 230px 310px;
+  }
+
+  .philosophy-body {
+    padding: 22px 18px 22px 22px;
+  }
+
+  .philosophy-body p {
+    font-size: 14px;
+    line-height: 1.85;
   }
 }
