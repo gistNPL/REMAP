@@ -84,11 +84,11 @@ body.home {
 }
 
 .hero-grid {
+  display: grid;
+  grid-template-columns: 1.55fr 0.95fr;
+  gap: 0;
   width: 100%;
   margin: 0;
-  display: grid;
-  grid-template-columns: 1.4fr 0.9fr;
-  gap: 0;
   height: 68vh;
   min-height: 420px;
   max-height: 760px;
@@ -100,6 +100,7 @@ body.home {
   background: #000000;
   border-radius: 0;
   box-shadow: none;
+  margin: 0;
 }
 
 .hero-item img {
@@ -107,37 +108,29 @@ body.home {
   height: 100%;
   display: block;
   padding: 0;
+  margin: 0;
 }
-
-.hero-item-result img {
-  object-fit: contain;
-  background: #020817;
-}
-
-.hero-item-poster img {
-  object-fit: contain;
-  background: #020817;
-}
-
 
 .hero-item-result {
-  background: linear-gradient(180deg, #020817 0%, #0a1d48 100%);
+  background: #020817;
 }
 
 .hero-item-result img {
-  object-fit: contain;
-  padding: 8px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-item-poster {
-  background: #031126;
+  background: #020817;
 }
 
 .hero-item-poster img {
   object-fit: contain;
-  padding: 8px;
+  object-position: center;
+  background: #020817;
 }
 
+/* 혹시 이전 오버레이 구조를 나중에 다시 쓸 수도 있으니 유지 */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -399,6 +392,12 @@ body.home {
   .slider-image {
     height: 500px;
   }
+
+  .hero-grid {
+    grid-template-columns: 1.35fr 0.95fr;
+    height: 60vh;
+    min-height: 380px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -408,7 +407,7 @@ body.home {
 
   .hero-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: 52vh 34vh;
+    grid-template-rows: 46vh 54vh;
     height: auto;
     min-height: 0;
     max-height: none;
@@ -447,15 +446,15 @@ body.home {
   .news-grid {
     grid-template-columns: 1fr;
   }
+
+  .hero-item-result img {
+    object-fit: contain;
+  }
 }
 
 @media (max-width: 480px) {
   .home-page {
     padding: 44px 0 72px;
-  }
-
-  .hero-item-result img {
-    padding: 10px;
   }
 
   .home-showcase-card {
@@ -471,5 +470,9 @@ body.home {
     width: 42px;
     height: 42px;
     font-size: 24px;
+  }
+
+  .hero-grid {
+    grid-template-rows: 240px 320px;
   }
 }
