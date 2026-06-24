@@ -33,10 +33,9 @@ img{ max-width: 100%; height: auto; }
 }
 .site-banner img{
   display: block;
-  width: 100%;
+  width: 100%;       /* ✅ 가로 끝까지 풀-블리드 (좌우 잘림/여백 없이) */
   height: auto;
-  margin: 0 auto;
-  max-width: 1300px;
+  margin: 0;
 }
 
 footer{
@@ -79,10 +78,10 @@ footer{
 }
 
 .brand-logo{
-  width: 30px !important;
-  height: 30px !important;
-  max-width: 30px !important;
-  max-height: 30px !important;
+  width: 44px !important;
+  height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
   object-fit: contain;
   display: block;
 }

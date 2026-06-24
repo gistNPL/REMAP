@@ -19,3 +19,7 @@ Professors give to me feedback to modify our website :
    → Jiyeon Kang, Hyuksang Kwon, Tae Kim, Jaegwan Kim 사진 삭제 (정의헌·류훈만 유지)
 9. [x] 모바일로 많이들 보는 것 같은데 모바일로도 볼 수 있게 flex되면 좋을 것 같아. 꺠진다는 말이 많네
    → 전역 img max-width, 반응형 헤더/배너, 480px 브레이크포인트 보강
+10. [x] REMAP 배너가 사진 크기대로라 중간에 잘린 느낌 → 가로 끝까지 구성
+   → .site-banner img의 max-width(1300px)/가운데 정렬 제거, width 100% 풀-블리드 (assets/css/style.css)
+11. [x] Logo 조금만 더 키워줘
+   → .brand-logo 30px → 44px (assets/css/style.css)
