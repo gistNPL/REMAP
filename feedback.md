@@ -21,5 +21,6 @@ Professors give to me feedback to modify our website :
    → 전역 img max-width, 반응형 헤더/배너, 480px 브레이크포인트 보강
 10. [x] REMAP 배너가 사진 크기대로라 중간에 잘린 느낌 → 가로 끝까지 구성
    → .site-banner img의 max-width(1300px)/가운데 정렬 제거, width 100% 풀-블리드 (assets/css/style.css)
-11. [x] Logo 조금만 더 키워줘
-   → .brand-logo 30px → 44px (assets/css/style.css)
+11. [x] Logo 조금만 더 키워줘 / (재요청) 더 키우고 가로도 제대로
+   → .brand-logo 30px → 44px → 60px; 배너 풀-블리드 확정 (헤드리스 렌더로 1600px 가로 꽉 참 확인)
+   → 캐시 미반영 대비 모든 페이지 style.css 링크에 ?v=3 캐시 버스팅 추가

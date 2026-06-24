@@ -78,10 +78,10 @@ footer{
 }
 
 .brand-logo{
-  width: 44px !important;
-  height: 44px !important;
-  max-width: 44px !important;
-  max-height: 44px !important;
+  width: 60px !important;
+  height: 60px !important;
+  max-width: 60px !important;
+  max-height: 60px !important;
   object-fit: contain;
   display: block;
 }
