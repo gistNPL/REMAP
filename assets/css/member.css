@@ -70,6 +70,11 @@
   align-items: center;
 }
 
+/* 사진 없는 카드는 텍스트만 1열로 */
+.member-card-content.no-photo {
+  grid-template-columns: 1fr;
+}
+
 .member-photo {
   width: 160px;
   height: 200px;

@@ -20,6 +20,25 @@ main{
 
 h1,h2,h3{ margin-top: 0; }
 
+/* ✅ 이미지가 모바일에서 넘치지 않도록 (global safety) */
+img{ max-width: 100%; height: auto; }
+
+/* =========================================================
+   Site Banner (GLOBAL) — 각 페이지 맨 위 메인 그림
+========================================================= */
+.site-banner{
+  width: 100%;
+  background: #111827;
+  line-height: 0;
+}
+.site-banner img{
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
 footer{
   text-align: center;
   padding: 20px 0 30px;
@@ -147,5 +166,21 @@ footer{
 
   main{
     padding: 22px 16px;
+  }
+}
+
+@media (max-width: 480px){
+  .site-header{
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  .site-nav{
+    gap: 10px 14px;
+  }
+  .site-nav a{
+    font-size: 0.9rem;
+  }
+  .brand{
+    font-size: 0.95rem;
   }
 }
